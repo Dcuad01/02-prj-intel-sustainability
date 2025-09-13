@@ -1,1 +1,157 @@
-/* Add your CSS here */
+/* Basic reset and defaults */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937; /* neutral dark gray for readability */
+  background: #f5f7fb; /* very light gray/blue */
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+/* Hero section: Intel-inspired gradient + centered content */
+.hero {
+  /* Intel blue and a darker shade for depth */
+  background: linear-gradient(135deg, #0068B5 0%, #004A86 100%);
+  color: #fff;
+  padding: 48px 16px;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* SVG logo scales crisply; we set width for consistent sizing */
+.logo {
+  width: 140px;          /* adjust this to resize the logo */
+  margin: 0 auto 16px;   /* center with some spacing below */
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.75rem);
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.95; /* subtle softening while preserving contrast */
+}
+
+/* Timeline layout: stack on small screens, scroll horizontally on larger screens */
+.timeline {
+  /* On small screens we stack vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* On larger screens, switch to a horizontal layout with side-scroll */
+@media (min-width: 800px) {
+  .timeline {
+    flex-direction: row;
+    overflow-x: auto;          /* horizontal scroll */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;           /* smooth horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* momentum scroll on touch devices */
+    overscroll-behavior-x: contain;    /* prevent overscroll chaining */
+    scroll-padding-left: 16px;         /* keep first card from hugging edge */
+  }
+}
+
+/* Milestone cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  padding: 16px;
+  width: 100%;        /* fill width on small screens */
+  flex: 0 0 auto;     /* prevent shrinking in horizontal flow */
+  /* Sleek, modern transitions */
+  transition: transform 220ms cubic-bezier(0.2, 0.6, 0.2, 1),
+              box-shadow 220ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  will-change: transform;
+  /* Ensure each card snaps cleanly */
+  scroll-snap-stop: always; /* helps stop at each card while scrolling */
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 320px;               /* fixed card width for the scroll row */
+    scroll-snap-align: start;   /* align nicely when scrolling */
+  }
+}
+
+.card h2 {
+  color: #0068B5;    /* Intel blue accent for the year */
+  font-size: 1rem;
+  margin: 0 0 4px;
+  letter-spacing: 0.05em;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.card-img {
+  /* Image fits the card with slight rounding */
+  width: 100%;
+  height: 160px;     /* fixed height for consistent card sizes */
+  object-fit: cover; /* crop instead of distortion */
+  border-radius: 8px;
+  margin: 8px 0 12px;
+  transition: transform 260ms ease;
+}
+
+/* Hover/focus effects for interactivity and accessibility */
+.card:hover {
+  transform: translateY(-6px) scale(1.01); /* subtle lift + scale */
+  /* layered, soft shadow for depth */
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.10),
+    0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Zoom image slightly on hover */
+.card:hover .card-img {
+  transform: scale(1.03);
+}
+
+/* Make cards keyboard-focusable and clearly outlined */
+.card:focus-visible {
+  outline: 3px solid #0068B5;
+  outline-offset: 2px;
+}
+
+/* Small hint text */
+.hint {
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 8px 16px 32px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .timeline {
+    scroll-behavior: auto;
+  }
+  .card,
+  .card-img {
+    transition: none !important;
+  }
+  .card:hover {
+    transform: none;
+  }
+}

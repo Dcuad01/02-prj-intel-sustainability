@@ -9,10 +9,10 @@
 <body>
 
   <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+  <header class="hero">
+    <div class="hero-content">
+      <!-- The SVG scales crisply; we resize via CSS below -->
+      <img class="logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -28,116 +28,144 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <section>
-
+  <section class="timeline">
     <!-- Card 1: 1968 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/1968%20electronics%20lab%2C%201960s%20engineers%2C%20silicon%20wafer%2C%20clean%20studio%20lighting%2C%20Intel%20blue%20accents%2C%20minimal%20tech%20aesthetic?width=1200&height=800&seed=intel1968"
+           alt="AI-generated 1960s electronics lab" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
       </p>
+      <!-- Extra details revealed on hover/focus -->
+      <p class="more">Fun fact: “Intel” combines “integrated” and “electronics.”</p>
     </div>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/Intel%204004%20microprocessor%2C%20macro%20shot%2C%20clean%20white%20background%2C%20soft%20shadows%2C%20studio%20lighting%2C%20tech%20photography?width=1200&height=800&seed=intel1971"
+           alt="AI-generated Intel 4004 microprocessor macro" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
       </p>
+      <p class="more">The 4004 had about 2,300 transistors and ran at ~740 kHz.</p>
     </div>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/8086%20processor%2C%20x86%20architecture%2C%20close-up%20of%20chip%20traces%20and%20pins%2C%20sleek%20tech%20style%2C%20Intel%20blue%20tones?width=1200&height=800&seed=intel1978"
+           alt="AI-generated close-up of 8086 chip traces" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
+      <p class="more">The x86 instruction set still powers most PCs today.</p>
     </div>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/Intel%2080386%20processor%20on%20a%20motherboard%2C%2032-bit%20era%2C%20moody%20lighting%2C%20macro%20tech%20photo%2C%20subtle%20blue%20highlight?width=1200&height=800&seed=intel1985"
+           alt="AI-generated 80386 processor on motherboard" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
         personal computers.
       </p>
+      <p class="more">The 80386 introduced protected mode and virtual memory.</p>
     </div>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/industrial%20facility%20with%20emissions%20abatement%20equipment%2C%20clean%20air%2C%20blue%20sky%2C%20modern%20sustainable%20manufacturing%2C%20cinematic%20photo?width=1200&height=800&seed=intel2006"
+           alt="AI-generated industrial plant with emissions control" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
         chemical abatement, renewable energy, and energy-efficient 
         manufacturing to reverse this trend.
       </p>
+      <p class="more">Abatement equipment helped cut PFC emissions significantly.</p>
     </div>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/RISE%20strategy%2C%20green%20energy%20meets%20circuit%20board%2C%20clean%20tech%20composition%2C%20Intel%20blue%20palette%2C%20futuristic%20yet%20minimal?width=1200&height=800&seed=intel2020"
+           alt="AI-generated green energy and circuit board concept" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
       </p>
+      <p class="more">RISE targets climate, social equity, and responsible supply chains.</p>
     </div>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/net-zero%202040%2C%20wind%20turbines%20with%20data%20overlay%2C%20clean%20tech%20visual%2C%20crisp%20sky%2C%20Intel%20brand%20blue%20accents?width=1200&height=800&seed=intel2022"
+           alt="AI-generated net-zero wind turbines with tech overlay" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
       </p>
+      <p class="more">Scope 1 and 2 cover direct and purchased energy emissions.</p>
     </div>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/large%20solar%20farm%2C%20ultra-clean%20tech%20aesthetic%2C%20geometric%20panels%2C%20crisp%20lighting%2C%20Intel%20blue%20tones?width=1200&height=800&seed=intel2023"
+           alt="AI-generated large solar array under blue sky" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
       </p>
+      <p class="more">Mix of on-site projects and regional renewable purchases.</p>
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div class="card" tabindex="0">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <!-- Add image -->
+      <img class="card-img" loading="lazy" decoding="async" width="600" height="400"
+           src="https://image.pollinations.ai/prompt/sustainability%20summit%20conference%2C%20stage%20lighting%2C%20audience%2C%20futuristic%20but%20professional%2C%20Intel%20blue%20color%20wash?width=1200&height=800&seed=intel2024"
+           alt="AI-generated conference with sustainability theme" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
       </p>
+      <p class="more">Collaboration speeds progress in water, energy, and materials.</p>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <p class="hint">Scroll to view timeline | Hover over cards to learn more!</p>
 </body>
 </html>
