@@ -160,11 +160,14 @@ h1, h2, h3 {
   display: block;
 }
 
+/* Card images: perfect square and fully filled (no extra white space) */
+/* This works together with removing width/height attributes in HTML. */
 .card-img {
   width: 100%;
   /* Slightly shorter image to reduce visual dominance */
-  aspect-ratio: 16 / 9; /* shorter image so the card isn't tall */
-  object-fit: cover;
+  aspect-ratio: 1 / 1;     /* make the image area a square */
+  object-fit: cover;       /* fill the square without gaps (no letterboxing) */
+  object-position: center; /* keep the subject centered */
   border-radius: 8px;
   margin: 6px 0 10px;
   transition: transform 260ms ease;
@@ -178,9 +181,9 @@ h1, h2, h3 {
     0 2px 6px rgba(0,0,0,0.05); /* soft layered shadow */
 }
 
-/* Zoom image slightly on hover */
+/* Remove image zoom so it never overflows the square container */
 .card:hover .card-img {
-  transform: scale(1.02);
+  transform: none;
 }
 
 /* Make cards keyboard-focusable and clearly outlined */
@@ -210,3 +213,4 @@ h1, h2, h3 {
     transform: none;
   }
 }
+/* end of file */
